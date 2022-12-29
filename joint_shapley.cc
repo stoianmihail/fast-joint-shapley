@@ -45,8 +45,12 @@ double* compute_moebius(int n, int k, double* qs, double* vs)
   // Fetch next mask with <= `q` bits. The mask will then be complemented.
   // This is partially function `subsets` from paper.
   auto next_compl_mask = [&](const unsigned q, const uint64_t mask, const unsigned compl_size) {
-    // Level up the lower bits if we reached `q`.
-    return (mask | (mask - (compl_size == q))) + 1;
+    // Enough bits? Then simply increment.
+    if (compl_size < q)
+      return mask + 1;
+
+    // Level up the lower bits if we reached `q`. Then increment.
+    return (mask | (mask - 1)) + 1;
   };
 
   // Compute the first term.
