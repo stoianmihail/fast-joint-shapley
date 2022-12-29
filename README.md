@@ -25,9 +25,9 @@ We compare both algorithms for different values of $n$ and $k = n$.
 
 $n$ | $O(3^n)$ | $O(2^n n^2)$
 --- | --- | --- |
-21 | 23.25 s | 1.52 s
-22 | 74.10 s | 3.39 s
-23 | N/A | 7.21 s
-24 | N/A | 15.32 s
-25 | N/A | 31.86 s
-26 | N/A | 67.15 s
+21 | 23.32 s | 1.56 s
+22 | 74.19 s | 3.39 s
+23 | N/A | 7.23 s
+24 | N/A | 15.28 s
+25 | N/A | 31.87 s
+26 | N/A | 67.27 s
